@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        form{
+            margin:45px;
+            background-color: lightgoldenrodyellow;
+            padding-left: 0.5cm;
+            padding-top: 0.5cm;
+        }
+
+        input{
+            margin: 10px 0;
+        }
+  
+        input[type='submit']{
+            font-size: 1.0rem;
+        }
+  
+        input:hover{
+            cursor: pointer;
+        }
+  
+        input[type='submit']{
+            padding: 0.5rem 0.8rem;
+            border: 2px solid #132b18;
+            background-color: #00331b;
+            color: white;
+            border-radius: 2px;
+        }
+        main{ 
+            font-family: Calibri, Helvetica, sans-serif;  
+            padding: 2cm;
+        }
+  
+    </style>
+</head>
+<body>
+    <form method="POST" action="/quiz">
+        <label for="Pregnancies">Pregnancies:</label><br>
+        <input type="number" id="Pregnancies" name="Pregnancies"><br>
+        <label for="Glucose">Glucose:</label><br>
+        <input type="number" id="Glucose" name="Glucose"><br>
+        <label for="BloodPressure">BloodPressure:</label><br>
+        <input type="number" id="BloodPressure" name="BloodPressure"><br>
+        <label for="SkinThickness">SkinThickness :</label><br>
+        <input type="number" id="SkinThickness" name="SkinThickness"><br>
+        <label for="Insulin">Insulin :</label><br>
+        <input type="number" id="Insulin" name="Insulin"><br>
+        <label for="BMI">BMI :</label><br>
+        <input type="number" step="any" id="BMI" name="BMI"><br>
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction :</label><br>
+        <input type="number" step="any" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction"><br>
+        <label for="Age">Age :</label><br>
+        <input type="number" id="Age" name="Age"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <main>
+        <p>{{result}}</p>
+    </main>
+</body>
+</html>
